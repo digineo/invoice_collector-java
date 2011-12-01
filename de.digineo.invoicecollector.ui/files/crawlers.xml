@@ -1,0 +1,12 @@
+<crawlers>
+	<crawler>Affilinet</crawler>
+	<crawler>Arcor</crawler>
+	<crawler>Binlayer</crawler>
+	<crawler>Hetzner</crawler>
+	<crawler>Hexonet</crawler>
+	<crawler>Hosteurope</crawler>
+	<crawler>Keyweb</crawler>
+	<crawler>Oekopost</crawler>
+	<crawler>Sipgate</crawler>
+	<crawler>Strato</crawler>
+</crawlers>

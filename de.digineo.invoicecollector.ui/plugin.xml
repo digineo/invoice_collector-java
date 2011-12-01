@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="de.digineo.invoicecollector.Application">
+         </run>
+      </application>
+   </extension>
+   
+   <extension point="org.eclipse.ui.handlers">
+		<handler
+			commandId="de.digineo.invoicecollector.openfolder"
+			class="de.digineo.invoicecollector.handlers.OpenFolderHandler">
+		</handler>
+		<handler
+			commandId="de.digineo.invoicecollector.removeinvoice"
+			class="de.digineo.invoicecollector.handlers.RemoveInvoiceHandler">
+		</handler>
+		<handler
+			commandId="de.digineo.invoicecollector.openinvoice"
+			class="de.digineo.invoicecollector.handlers.OpenInvoiceHandler">
+		</handler>
+		<handler
+			commandId="de.digineo.invoicecollector.refresh"
+			class="de.digineo.invoicecollector.handlers.RefreshHandler">
+		</handler>
+	</extension>
+   
+   
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="de.digineo.invoicecollector.Perspective"
+            id="de.digineo.invoicecollector.perspective">
+      </perspective>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views" id="views">
+        
+         <view
+	            name="Rechnungen"
+	            class="de.digineo.invoicecollector.tables.InvoiceTable"
+	            id="de.digineo.invoicecollector.InvoiceTable"
+	            allowMultiple="false"
+	            icon="icons/icons/document-pdf.png">
+	      </view>
+        
+	      <view
+	      		name="Rechnungen Filtern"
+	            class="de.digineo.invoicecollector.views.FilterView"
+	            id="de.digineo.invoicecollector.FilterView"
+	            icon="icons/icons/magnifier.png">
+	      </view>
+   </extension>
+   <extension point="org.eclipse.ui.menus">
+		<menuContribution locationURI="menu:org.eclipse.ui.main.menu">
+			<menu id="de.digineo.invoicecollector.file" label="Datei">
+				<command
+	               commandId="org.eclipse.ui.window.preferences"
+	               label="Einstellungen">
+	         	</command>
+				<command commandId="org.eclipse.ui.file.exit" label="Schließen" />
+			</menu>
+			
+		</menuContribution>
+		<menuContribution locationURI="toolbar:org.eclipse.ui.main.toolbar">
+			<toolbar id="de.digineo.invoicecollector.toolbar">
+				<command commandId="de.digineo.invoicecollector.openfolder" icon="icons/icons/folder-open-document.png" label="Rechnungsarchiv Öffnen" tooltip="Rechnungsarchiv Öffnen" />
+				<command commandId="de.digineo.invoicecollector.refresh" icon="icons/icons/arrow-circle-double.png" label="Auf neue Rechnungen überprüfen" tooltip="Auf neue Rechnungen überprüfen" />
+			
+			</toolbar>
+		</menuContribution>
+	    <menuContribution locationURI="popup:de.digineo.tablemenu">
+	        <command
+	            commandId="de.digineo.invoicecollector.openinvoice"
+	            icon="icons/icons/document-pdf-text.png"
+	            style="push"
+	            label="Rechung öffnen">
+	        </command>
+	        <command
+	            commandId="de.digineo.invoicecollector.removeinvoice"
+	            icon="icons/icons/cross.png"
+	            style="push"
+	            label="Rechung löschen">
+	        </command>
+	    </menuContribution>
+
+	</extension>
+   <extension point="org.eclipse.ui.preferencePages">
+	      <page
+	            class="de.digineo.invoicecollector.preferences.MainPreferences"
+	            id="de.digineo.invoicecollector.preferences.main"
+	            name="Allgemein">
+	      </page>
+	      <page
+	            class="de.digineo.invoicecollector.preferences.AccountPreferences"
+	            id="de.digineo.invoicecollector.preferences.account"
+	            name="Accounts">
+	      </page>
+	      <page
+	            class="de.digineo.invoicecollector.preferences.ImapAccountPreferences"
+	            id="de.digineo.invoicecollector.preferences.imap"
+	            name="Imap Accounts">
+	      </page>
+	      <page
+	            class="de.digineo.invoicecollector.preferences.ImapFilterPreferences"
+	            id="de.digineo.invoicecollector.preferences.imapfilter"
+	            name="Imap Filter">
+	      </page>
+     </extension>
+	 <extension
+         point="org.eclipse.core.runtime.preferences">
+               <initializer
+            class="de.digineo.invoicecollector.PluginPreferenceInitializer">
+      </initializer>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+         <command id="de.digineo.invoicecollector.openfolder" name="Rechnungsarchiv öffnen" />
+         <command id="de.digineo.invoicecollector.refresh" name="Auf neue Rechnungen überprüfen" />
+         <command id="de.digineo.invoicecollector.removeinvoice" name="Rechnung löschen" />
+         <command id="de.digineo.invoicecollector.openinvoice" name="Rechnung öffnen" />
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="de.digineo.invoicecollector.ui.application"
+            name="product">
+         <property
+               name="appName"
+               value="product">
+         </property>
+      </product>
+   </extension>
+</plugin>

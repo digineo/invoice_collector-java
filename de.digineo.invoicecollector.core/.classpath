@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="src" output="target/classes" path="src/main/java"/>
+	<classpathentry excluding="**" kind="src" output="target/classes" path="src/main/resources"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/commons-codec-1.4.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/commons-collections-3.2.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/commons-io-2.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/commons-jxpath-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/commons-lang-2.6.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/commons-logging-1.1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/cssparser-0.9.5.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/htmlunit-2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/htmlunit-core-js-2.9.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/httpclient-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/httpcore-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/httpmime-4.1.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/json-simple-1.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/nekohtml-1.9.15.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/sac-1.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/serializer-2.7.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/sqlite-jdbc-3.7.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/xalan-2.7.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/xercesImpl-2.9.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="target/dependency/xml-apis-1.3.04.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
